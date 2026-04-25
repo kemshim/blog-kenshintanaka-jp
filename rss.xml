@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kenshin tanaka</title>
+    <link>https://kenshintanaka.jp/</link>
+    <description>田中けんしんの個人ブログ。</description>
+    <language>ja</language>
+    <atom:link href="https://kenshintanaka.jp/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0900</lastBuildDate>
+
+    <item>
+      <title>『方丈記』鴨長明</title>
+      <link>https://kenshintanaka.jp/posts/2026-04-25-hojoki.html</link>
+      <guid isPermaLink="true">https://kenshintanaka.jp/posts/2026-04-25-hojoki.html</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0900</pubDate>
+      <description>八百年生き延びた短い本を読み直して。災害記録としての方丈記と、残るものと作為について。</description>
+    </item>
+
+    <item>
+      <title>はじめに</title>
+      <link>https://kenshintanaka.jp/posts/2026-04-25-hello.html</link>
+      <guid isPermaLink="true">https://kenshintanaka.jp/posts/2026-04-25-hello.html</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0900</pubDate>
+      <description>このブログの最初の記事。何を書き、なぜ素の HTML で残すのか。</description>
+    </item>
+
+  </channel>
+</rss>

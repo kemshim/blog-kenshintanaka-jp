@@ -1,0 +1,56 @@
+name: archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'style.css'
+  schedule:
+    # Monthly refresh, at 02:00 UTC on the 1st
+    - cron: '0 2 1 * *'
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for Cloudflare Pages to propagate
+        run: sleep 90
+
+      - name: Collect URLs from repo
+        id: urls
+        run: |
+          {
+            echo 'urls<<EOF'
+            find . -name '*.html' -not -path './.git/*' -not -path './.github/*' \
+              | sed 's|^\./||' \
+              | sed 's|^index\.html$||' \
+              | awk '{ print "https://kenshintanaka.jp/" $0 }'
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Archive to web.archive.org (Save Page Now)
+        run: |
+          while IFS= read -r url; do
+            [ -z "$url" ] && continue
+            echo "→ web.archive.org: $url"
+            curl -sS -L -A 'kenshintanaka.jp-archiver (+https://kenshintanaka.jp/)' \
+              --max-time 60 \
+              "https://web.archive.org/save/${url}" -o /dev/null || echo "  (failed, continuing)"
+            sleep 8
+          done <<< "${{ steps.urls.outputs.urls }}"
+
+      - name: Archive to archive.today
+        run: |
+          while IFS= read -r url; do
+            [ -z "$url" ] && continue
+            echo "→ archive.today: $url"
+            curl -sS -L -A 'kenshintanaka.jp-archiver (+https://kenshintanaka.jp/)' \
+              --max-time 60 \
+              --data-urlencode "url=${url}" \
+              "https://archive.ph/submit/" -o /dev/null || echo "  (failed, continuing)"
+            sleep 8
+          done <<< "${{ steps.urls.outputs.urls }}"
