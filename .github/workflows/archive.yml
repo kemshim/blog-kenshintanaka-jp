@@ -26,6 +26,7 @@ jobs:
           {
             echo 'urls<<EOF'
             find . -name '*.html' -not -path './.git/*' -not -path './.github/*' \
+                -not -name 'styleguide.html' \
               | sed 's|^\./||' \
               | sed 's|^index\.html$||' \
               | awk '{ print "https://kenshintanaka.jp/" $0 }'

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>styleguide ｜ kenshin tanaka</title>
+<meta name="description" content="HTML タグの表示確認用ページ。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://kenshintanaka.jp/styleguide.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="./">kenshin tanaka</a>
+</header>
+
+<main>
+  <article>
+    <h1>styleguide</h1>
+    <p>本文中で使う HTML タグの表示確認用。サイトには公開リンクを置かず、必要なときに直接 URL でアクセスする。</p>
+
+    <h2>1. リンク</h2>
+    <p>本文の中に <a href="#">通常のリンク</a> を埋め込んだとき、訪問済みでも <a href="https://kenshintanaka.jp/">同じ色</a> のままで、ホバーすると透明度だけ少し落ちる。色変更は使わず、下線一本で示す。</p>
+
+    <h2>2. 画像</h2>
+    <figure>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="image placeholder">
+        <rect x="0" y="0" width="600" height="360" fill="#eee"/>
+        <line x1="0" y1="0" x2="600" y2="360" stroke="#ccc" stroke-width="1"/>
+        <line x1="600" y1="0" x2="0" y2="360" stroke="#ccc" stroke-width="1"/>
+        <text x="300" y="190" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#888">image · 600 × 360</text>
+      </svg>
+    </figure>
+
+    <h2>3. 画像キャプション</h2>
+    <figure>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="image with caption">
+        <rect x="0" y="0" width="600" height="360" fill="#eee"/>
+        <line x1="0" y1="0" x2="600" y2="360" stroke="#ccc" stroke-width="1"/>
+        <line x1="600" y1="0" x2="0" y2="360" stroke="#ccc" stroke-width="1"/>
+        <text x="300" y="190" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#888">image with caption</text>
+      </svg>
+      <figcaption>図 1. 画像のキャプションは小さめ・薄めの色にして、本文に主張を譲る。出典・撮影日・補足説明などをここに置く。</figcaption>
+    </figure>
+
+    <h2>4. 見出し2 (h2)</h2>
+    <p>このように、本文と見出し2を並べて見たときの間隔とサイズの関係を確認する。装飾的な下線や背景は付けず、上下マージンとサイズだけで階層を示す。</p>
+
+    <h3>5. 見出し3 (h3)</h3>
+    <p>見出し3はさらに細かい節分け。本文と同サイズで、太さもほとんど変えず、上のマージンだけで「ここで段が変わる」と知らせる。</p>
+
+    <h3>もう一つの h3</h3>
+    <p>連続した h3 が並んだときの間隔の確認。</p>
+
+    <h2>6. 箇条書き</h2>
+    <ul>
+      <li>順序のないリスト。マーカーはブラウザのデフォルトに任せる</li>
+      <li>項目が長くなって二行三行と続くときの折り返しの見え方を確認するために、わざと長い行を書いておく。インデントが揃っていれば及第点</li>
+      <li>三つめの短い項目</li>
+      <li>
+        ネストもできる
+        <ul>
+          <li>ネストの一つめ</li>
+          <li>ネストの二つめ</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>7. 箇条書き（数字）</h2>
+    <ol>
+      <li>順序つきリストの一つ目</li>
+      <li>二つ目。番号は自動で振られる</li>
+      <li>三つ目。十項目を超えたときの桁ぞろえも、ブラウザのデフォルトに任せる</li>
+    </ol>
+
+    <h2>8. 表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>値</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>font-size</td>
+          <td>14px</td>
+          <td>本文</td>
+        </tr>
+        <tr>
+          <td>line-height</td>
+          <td>1.7</td>
+          <td>少し詰めめ</td>
+        </tr>
+        <tr>
+          <td>font-weight</td>
+          <td>300</td>
+          <td>細字</td>
+        </tr>
+        <tr>
+          <td>max-width</td>
+          <td>640px</td>
+          <td>1 カラム</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>9. 引用</h2>
+    <blockquote>
+      <p>ゆく河の流れは絶えずして、しかももとの水にあらず。淀みに浮かぶうたかたは、かつ消えかつ結びて、久しくとどまりたるためしなし。</p>
+    </blockquote>
+    <p>—— 鴨長明『方丈記』</p>
+
+    <p>引用が複数段落にわたるときの確認:</p>
+
+    <blockquote>
+      <p>一段落目。短い引用ならこのくらい。</p>
+      <p>二段落目。続きはこうなる。段落間の間隔は本文と同じ <code>1.5em</code> 程度。</p>
+    </blockquote>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p><a href="./">← home</a></p>
+  <p><a href="rss.xml">rss</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</footer>
+
+</body>
+</html>
