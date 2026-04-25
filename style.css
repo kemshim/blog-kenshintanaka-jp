@@ -1,0 +1,102 @@
+html {
+  background: #fafaf7;
+  color: #1a1a1a;
+}
+
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3em 20px;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 4em 24px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 2em 0 1em;
+}
+
+h2 {
+  font-size: 1.15em;
+  margin: 2.5em 0 1em;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin: 0 0 1.5em;
+}
+
+blockquote {
+  margin: 0 0 1.5em 1em;
+  padding-left: 1em;
+  border-left: 1px solid #ccc;
+}
+
+time {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.site-header {
+  margin-bottom: 3em;
+  font-size: 0.95em;
+}
+
+.site-footer {
+  margin-top: 4em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin: 0 0 0.6em;
+  display: flex;
+  gap: 1em;
+}
+
+.post-list time {
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
