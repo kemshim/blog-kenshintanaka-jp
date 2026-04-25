@@ -119,6 +119,46 @@
       <p>一段落目。短い引用ならこのくらい。</p>
       <p>二段落目。続きはこうなる。段落間の間隔は本文と同じ <code>1.5em</code> 程度。</p>
     </blockquote>
+
+    <h2>10. 強調 (strong / em)</h2>
+    <p>本文の中で <strong>strong は太字</strong>、<em>em は斜体</em>。日本語フォントは斜体グリフを持たないので em は欧文 (<em>like this</em>) で効きやすい。</p>
+
+    <h2>11. インラインコード (code)</h2>
+    <p>関数名や設定値を本文に埋め込むときの <code>inline code</code>。たとえば CSS なら <code>font-weight: 300</code> のように書く。</p>
+
+    <h2>12. コードブロック (pre)</h2>
+    <pre><code>body {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}</code></pre>
+
+    <h2>13. 出典 (cite)</h2>
+    <p>引用元の作品名や著者名を <cite>『方丈記』</cite> のように示す。本ブログでは『 』記号で視覚化するので、<code>&lt;cite&gt;</code> 自体は意味づけのみで装飾はしない。</p>
+
+    <h2>14. 細字 (small)</h2>
+    <p>本文より小さく薄い <small>注釈や補足、出典の補注などに使う細字</small>。前後の本文に従属する補助情報に。</p>
+
+    <h2>15. 折りたたみ (details / summary)</h2>
+    <details>
+      <summary>長い引用やネタバレを畳むときの summary（クリックで開く）</summary>
+      <p>畳まれていた中身。長文の原典引用、結末への言及、補論など、読み手に「読む／読まない」の選択を渡したい部分に使う。</p>
+      <p>もう一段落の例。</p>
+    </details>
+
+    <h2>16. 定義リスト (dl / dt / dd)</h2>
+    <dl>
+      <dt>書名</dt>
+      <dd>方丈記</dd>
+      <dt>著者</dt>
+      <dd>鴨長明</dd>
+      <dt>成立年</dt>
+      <dd>1212 年（建暦 2 年）</dd>
+      <dt>分量</dt>
+      <dd>原文約 8,000 字</dd>
+      <dt>底本</dt>
+      <dd>大福光寺本</dd>
+    </dl>
   </article>
 </main>
 

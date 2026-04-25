@@ -107,6 +107,76 @@ blockquote {
   border-left: 1px solid #ccc;
 }
 
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+small {
+  color: #666;
+}
+
+code {
+  font-family: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92em;
+  font-weight: 400;
+}
+
+pre {
+  font-family: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  font-size: 0.88em;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0.8em 1em;
+  margin: 0 0 1.5em;
+  background: #f0eee4;
+  overflow-x: auto;
+}
+
+pre code {
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  padding: 0;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.5em;
+  row-gap: 0.3em;
+  margin: 0 0 1.5em;
+}
+
+dt {
+  font-weight: 400;
+  color: #666;
+}
+
+dd {
+  margin: 0;
+}
+
+details {
+  margin: 0 0 1.5em;
+}
+
+summary {
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+details[open] summary {
+  margin-bottom: 1em;
+}
+
 time {
   color: #666;
   font-size: 0.9em;
